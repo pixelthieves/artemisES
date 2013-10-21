@@ -385,8 +385,8 @@ public class World {
                             field.setAccessible(true);
                             field.set(target, world.getMapper(componentType));
                         }
-                        clazz = clazz.getSuperclass();
                     }
+                    clazz = clazz.getSuperclass();
                 } while (clazz != null);
             } catch (Exception e) {
                 throw new RuntimeException("Error while setting component mappers", e);
